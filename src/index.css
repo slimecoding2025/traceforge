@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-void: #020402;
+    --bg-surface: #070a07;
+    --bg-card: rgba(8, 14, 8, 0.88);
+    --border-matrix: rgba(0, 255, 102, 0.2);
+    --border-crimson: rgba(255, 23, 68, 0.25);
+    --neon-green: #00ff66;
+    --neon-red: #ff1744;
+    --neon-amber: #ffb703;
+    --matrix-dark: #0d140d;
+  }
+
+  body {
+    background-color: var(--bg-void);
+    color: #e5e7eb;
+    overflow-x: hidden;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, ui-sans-serif, system-ui;
+  }
+}
+
+/* Carbon & Terminal Matrix Backgrounds */
+.cyber-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 102, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 102, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.radial-cyber-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 255, 102, 0.09) 0%, rgba(255, 23, 68, 0.04) 40%, transparent 75%);
+}
+
+.radar-sweep-bg {
+  background: conic-gradient(from 0deg at 50% 50%, rgba(0, 255, 102, 0) 0deg, rgba(0, 255, 102, 0.18) 60deg, transparent 61deg);
+  animation: radar-spin 4s linear infinite;
+}
+
+@keyframes radar-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glassmorphism Cards: Black with Green & Red Accents */
+.cyber-card {
+  background: rgba(6, 10, 6, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 102, 0.16);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.65);
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 255, 102, 0.45);
+  box-shadow: 0 10px 30px -5px rgba(0, 255, 102, 0.15);
+}
+
+.cyber-card-danger {
+  background: rgba(14, 6, 7, 0.85);
+  border: 1px solid rgba(255, 23, 68, 0.28);
+}
+
+.cyber-card-danger:hover {
+  border-color: rgba(255, 23, 68, 0.6);
+  box-shadow: 0 10px 35px -5px rgba(255, 23, 68, 0.22);
+}
+
+.cyber-card-emerald {
+  background: rgba(4, 14, 6, 0.85);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+}
+
+.cyber-card-emerald:hover {
+  border-color: rgba(0, 255, 102, 0.6);
+  box-shadow: 0 10px 35px -5px rgba(0, 255, 102, 0.25);
+}
+
+/* Distinct Button Scales (Large, Medium, Small, Micro) */
+.btn-hero-matrix {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #00ff66;
+  border: 1px solid #00ff66;
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
+  transition: all 0.2s ease;
+}
+.btn-hero-matrix:hover {
+  background-color: #33ff85;
+  box-shadow: 0 0 30px rgba(0, 255, 102, 0.65);
+  transform: translateY(-1px);
+}
+
+.btn-hero-danger {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ff1744;
+  border: 1px solid #ff1744;
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.4);
+  transition: all 0.2s ease;
+}
+.btn-hero-danger:hover {
+  background-color: #ff3d66;
+  box-shadow: 0 0 30px rgba(255, 23, 68, 0.65);
+  transform: translateY(-1px);
+}
+
+.btn-tactical-md {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.15s ease;
+}
+
+.btn-tactical-sm {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.15s ease;
+}
+
+.btn-micro {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+}
+
+/* Distinct Typography Labels */
+.label-kicker {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.label-huge-metric {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+/* Scanline overlay */
+.scanlines {
+  position: relative;
+}
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), linear-gradient(90deg, rgba(255, 23, 68, 0.02), rgba(0, 255, 102, 0.02), rgba(0, 0, 0, 0.04));
+  z-index: 2;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020402;
+}
+::-webkit-scrollbar-thumb {
+  background: #0d1e11;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 255, 102, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff66;
+}

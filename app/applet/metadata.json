@@ -1,0 +1,6 @@
+{
+  "name": "TraceForge",
+  "description": "TraceForge — Privacy-first defensive cybersecurity investigation workbench for Linux authentication logs and structured JSONL security events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

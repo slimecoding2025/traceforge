@@ -1,0 +1,14 @@
+# ==============================================================================
+# TRACEFORGE NORMAL BASELINE LOG (ZERO ALERT SCENARIO)
+# Used to verify that detection rules do NOT generate false positives on normal
+# operational activity.
+# ==============================================================================
+Oct 12 07:00:01 web01 sshd[2010]: Accepted publickey for ansible from 10.0.1.5 port 55102 ssh2
+Oct 12 07:00:01 web01 sshd[2010]: pam_unix(sshd:session): session opened for user ansible(uid=1000) by (uid=0)
+Oct 12 07:00:15 web01 sudo:   ansible : TTY=pts/0 ; PWD=/home/ansible ; USER=root ; COMMAND=/usr/bin/apt-get update
+Oct 12 07:01:00 web01 sshd[2010]: pam_unix(sshd:session): session closed for user ansible
+Oct 12 07:15:30 web01 sshd[2050]: Failed password for dev from 10.0.1.20 port 49200 ssh2
+Oct 12 07:15:45 web01 sshd[2055]: Accepted password for dev from 10.0.1.20 port 49204 ssh2
+Oct 12 07:15:45 web01 sshd[2055]: pam_unix(sshd:session): session opened for user dev(uid=1001) by (uid=0)
+Oct 12 07:30:00 web01 CRON[2100]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 12 07:30:01 web01 CRON[2100]: pam_unix(cron:session): session closed for user root

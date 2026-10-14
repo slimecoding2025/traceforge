@@ -1,0 +1,10 @@
+{"timestamp": "2026-10-12T11:00:01Z", "source_ip": "198.51.100.201", "username": "root", "event_type": "ssh_login_failed", "outcome": "failure", "message": "Failed password for root", "hostname": "cloud-node-01"}
+{"timestamp": "2026-10-12T11:00:06Z", "source_ip": "198.51.100.201", "username": "root", "event_type": "ssh_login_failed", "outcome": "failure", "message": "Failed password for root", "hostname": "cloud-node-01"}
+{"timestamp": "2026-10-12T11:00:11Z", "source_ip": "198.51.100.201", "username": "root", "event_type": "ssh_login_failed", "outcome": "failure", "message": "Failed password for root", "hostname": "cloud-node-01"}
+{"timestamp": "2026-10-12T11:00:16Z", "source_ip": "198.51.100.201", "username": "root", "event_type": "ssh_login_failed", "outcome": "failure", "message": "Failed password for root", "hostname": "cloud-node-01"}
+{"timestamp": "2026-10-12T11:00:21Z", "source_ip": "198.51.100.201", "username": "root", "event_type": "ssh_login_failed", "outcome": "failure", "message": "Failed password for root", "hostname": "cloud-node-01"}
+{"timestamp": "2026-10-12T11:00:26Z", "source_ip": "198.51.100.201", "username": "root", "event_type": "ssh_login_failed", "outcome": "failure", "message": "Failed password for root", "hostname": "cloud-node-01"}
+{"timestamp": "2026-10-12T11:15:00Z", "source_ip": "192.0.2.55", "username": "developer", "event_type": "ssh_login_success", "outcome": "success", "message": "Accepted publickey for developer", "hostname": "cloud-node-01"}
+{"timestamp": "2026-10-12T11:16:10Z", "source_ip": null, "username": "developer", "event_type": "sudo_elevation", "outcome": "success", "message": "sudo: developer : COMMAND=/bin/bash", "hostname": "cloud-node-01", "command": "/bin/bash", "target_user": "root"}
+{"corrupt_json": [unclosed_bracket_invalid_record
+{"timestamp": "2026-10-12T11:20:00Z", "source_ip": "192.0.2.60", "username": "operator", "event_type": "session_opened", "outcome": "success", "message": "session opened for user operator", "hostname": "cloud-node-01"}
